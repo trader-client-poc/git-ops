@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    type: application
+  name: stocktrader-location2
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: citi-sat2-cluster-link
+    namespace: stocktrader
+  project: default
+  source:
+    path: trader
+    repoURL: 'https://github.com/trader-client-poc/git-ops'
+    targetRevision: sat2-location
