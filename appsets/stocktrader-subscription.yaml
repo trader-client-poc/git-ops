@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: stocktrader-subscription
+spec:
+  generators:
+  - clusters: {} # Automatically use all clusters defined within Argo CD
+  template:
+    metadata:
+      name: '{{cluster}}-stocktrader-subscription' 
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/trader-client-poc/git-ops
+        targetRevision: HEAD
+        path: operator/subscription
+      destination:
+        server: '{{cluster}}' 
+        namespace: openshift-operators
