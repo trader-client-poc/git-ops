@@ -8,6 +8,8 @@ spec:
   template:
     metadata:
       name: '{{name}}-stocktrader-catalog' 
+      labels:
+          type: config      
     spec:
       project: "default"
       source:
