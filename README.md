@@ -1,1 +1,1 @@
-# git-ops
+# Repo for deployment artifacts
