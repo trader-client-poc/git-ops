@@ -3,7 +3,7 @@ kind: Application
 metadata:
   labels:
     type: application
-  name: stocktrader-dev
+  name: in-cluster-stocktrader
   namespace: openshift-gitops
 spec:
   destination:
