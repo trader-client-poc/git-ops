@@ -7,7 +7,7 @@ spec:
   - clusters: {} # Automatically use all clusters defined within Argo CD
   template:
     metadata:
-      name: '{{cluster}}-stocktrader-subscription' 
+      name: '{{name}}-stocktrader-subscription' 
     spec:
       project: "default"
       source:
@@ -15,5 +15,5 @@ spec:
         targetRevision: HEAD
         path: operator/subscription
       destination:
-        server: '{{cluster}}' 
+        server: '{{server}}' 
         namespace: openshift-operators
