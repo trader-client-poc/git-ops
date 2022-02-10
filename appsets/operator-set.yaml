@@ -7,7 +7,7 @@ spec:
   - clusters: {} # Automatically use all clusters defined within Argo CD
   template:
     metadata:
-      name: '{{cluster}}-stocktrader-catalog' 
+      name: '{{name}}-stocktrader-catalog' 
     spec:
       project: "default"
       source:
@@ -15,5 +15,5 @@ spec:
         targetRevision: HEAD
         path: operator/catalog
       destination:
-        server: '{{cluster}}' 
+        server: '{{server}}' 
         namespace: openshift-marketplace
