@@ -168,8 +168,6 @@ spec:
     host: dbaas907.hyperp-dbaas.cloud.ibm.com
     port: 30139
     ssl: true
-  ingress:
-    address: <your proxy node IP>:443
   jwt:
     audience: stock-trader
     issuer: http://stock-trader.ibm.com
