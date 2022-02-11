@@ -3,7 +3,7 @@ kind: Application
 metadata:
   labels:
     type: application
-  name: stocktrader-location1
+  name: citi-sat1-cluster-link-stocktrader
   namespace: openshift-gitops
 spec:
   destination:
