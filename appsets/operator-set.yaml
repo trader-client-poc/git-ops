@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: stocktrader-catalog
+spec:
+  generators:
+  - clusters: {} # Automatically use all clusters defined within Argo CD
+  template:
+    metadata:
+      name: '{{name}}-stocktrader-catalog' 
+      labels:
+          type: config      
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/trader-client-poc/git-ops
+        targetRevision: HEAD
+        path: operator/catalog
+      destination:
+        server: '{{server}}' 
+        namespace: openshift-marketplace

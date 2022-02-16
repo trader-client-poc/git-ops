@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: stocktrader-catalog
+  namespace: openshift-marketplace 
+spec:
+  sourceType: grpc
+  image: docker.io/ibmstocktrader/stocktrader-operator-catalog:v0.2.0
+  displayName: StockTrader Catalog
+  publisher: IBM
+  updateStrategy:
+    registryPoll: 
+      interval: 30m

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    type: application
+  name: in-cluster-stocktrader
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: stocktrader
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: trader
+    repoURL: 'https://github.com/trader-client-poc/git-ops'
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
