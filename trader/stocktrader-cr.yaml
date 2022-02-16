@@ -340,7 +340,7 @@ spec:
     cpuThreshold: 75
     image:
       repository: quay.io/gas_stocktrader/trader-poc
-      tag: 0c118c09fcb797e702c223a8cea83711e9616e92
+      tag: 6b46987165f3f1bc365fb798f517b32e3c57b3fd
   tradr:
     enabled: false
     replicas: 1
