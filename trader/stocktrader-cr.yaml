@@ -3,6 +3,8 @@ kind: StockTrader
 metadata:
   name: ceh
   namespace: stocktrader
+  labels:
+    test=mylabel
 spec:
   global:
     auth: basic
